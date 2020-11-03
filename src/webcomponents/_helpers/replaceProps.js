@@ -1,0 +1,1 @@
+export default (data, templateHtml = `${template}`) => templateHtml.replace(/%\s*(\w+?)\s*%/g, (_, token) => data[token] || '');

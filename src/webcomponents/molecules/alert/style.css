@@ -1,0 +1,48 @@
+:host {
+  background-color: var(--color-white);
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  grid-template-areas: 'icon content close';
+  justify-items: start;
+  border-left: 3px solid var(--color-theme);
+  margin: 1rem auto;
+  padding: 1rem 0;
+}
+
+sg-icon {
+  grid-area: icon;
+  color: var(--color-theme);
+  font-size: 2rem;
+  justify-self: center;
+  display: flex;
+  line-height: 1;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-theme);
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--color-theme);
+}
+
+button {
+  grid-area: close;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-self: center;
+  margin-top: 5px;
+}
+
+ul {
+  margin-top: 0;
+}

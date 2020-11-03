@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: 'Accueil'
+---
+
+<sg-container>
+  <sg-alert
+    title="Attention : vérifiez vos informations"
+    theme="warning"
+    icon="exclamation-sign"
+  >
+    <div slot="alert-content">
+      <ul>
+        <li>test</li>
+        <li>test</li>
+      </ul>
+    </div>
+  </sg-alert>
+  <sg-alert
+    title="Error : Veuillez corriger les erreurs"
+    theme="danger"
+    icon="remove-sign"
+  ></sg-alert>
+  <sg-alert
+    title="Info : Informations complémentaires"
+    theme="info"
+    icon="info-sign"
+  ></sg-alert>
+  <sg-alert
+    title="Success : enregistrement réussi"
+    theme="success"
+    icon="ok-sign"
+  ></sg-alert>
+  <sg-button>Click</sg-button>
+  <sg-button class="sg-button-large" id="chervet">cliquer ici</sg-button>
+  <sg-input></sg-input>
+  <sg-input></sg-input>
+  <sg-list items='["css","html", "js"]'></sg-list>
+</sg-container>

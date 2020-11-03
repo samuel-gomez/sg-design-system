@@ -1,0 +1,28 @@
+:host {
+  --transition: background-color 0.5s linear;
+  --button-width: 100%;
+  --background: var(--color-blue);
+  --color: var(--color-white);
+  --padding: 1rem;
+  --font-size: 1rem;
+  --background-hover: var(--color-blue-dark);
+  --box-shadow: inset 0 -3px var(--color-blue-dark);
+  --border: none;
+}
+
+button {
+  background: var(--background);
+  color: var(--color);
+  padding: var(--padding);
+  font-size: var(--font-size);
+  width: var(--button-width);
+  border-radius: var(--radius);
+  cursor: var(--cursor-link);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--background-hover);
+}
