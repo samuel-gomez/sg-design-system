@@ -9,6 +9,7 @@ import './molecules/menu';
 import './molecules/menu/menuitem';
 import './molecules/alert';
 import './molecules/logo';
+import './molecules/user';
 
 /* Organisms */
 import './organisms/header';
@@ -16,9 +17,3 @@ import './organisms/header';
 /* Templates */
 import './templates/container';
 import './templates/layout';
-
-/* Pages */
-import './pages/home';
-import './pages/about';
-import './pages/settings';
-import './pages/notfound';

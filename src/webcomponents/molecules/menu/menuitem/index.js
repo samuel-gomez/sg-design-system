@@ -6,13 +6,14 @@ class SgMenuItem extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.activeItem = this.getAttribute('activeItem');
     this.label = this.getAttribute('label');
     this.href = this.getAttribute('href');
-    this.className = this.href === this.activeItem ? 'active' : '';
+    this.className =
+      `${this.href}/` === window.location.pathname ? 'active' : '';
   }
 
   connectedCallback() {
+    console.log('location', window.location.pathname);
     this.shadowRoot.innerHTML = `<style>${style.toString()}</style>${replaceProps(
       {
         href: this.href,

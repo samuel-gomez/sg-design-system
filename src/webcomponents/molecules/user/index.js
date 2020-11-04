@@ -3,7 +3,7 @@ import template from './template.html';
 
 import replaceProps from '../../_helpers/replaceProps';
 
-class SgLogo extends HTMLElement {
+class SgUser extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -59,4 +59,4 @@ class SgLogo extends HTMLElement {
   }
 }
 
-customElements.define('sg-logo', SgLogo);
+customElements.define('sg-user', SgUser);

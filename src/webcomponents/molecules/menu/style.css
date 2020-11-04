@@ -1,6 +1,7 @@
 :host {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+  justify-content: flex-start;
 }
-
