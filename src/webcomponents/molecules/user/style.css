@@ -1,16 +1,61 @@
 :host {
   color: var(--color-white);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'title icon'
+    'subtitle icon';
+  text-align: right;
+  padding: 0.1rem 1rem;
+  position: relative;
+  border-radius: var(--radius) var(--radius) 0 0;
+  --color-icon: var(--color-white);
   align-items: center;
-  justify-content: flex-end;
 }
 
-img {
-  width: 50px;
-  height: 50px;
+:host(:hover) {
+  background-color: var(--color-white);
+  color: var(--color-main);
+  --color-icon: var(--color-main);
 }
 
-strong {
-  font-size: 1.3rem;
-  padding: 0 1rem;
+:host(:hover) ul {
+  display: block;
+}
+
+:host strong {
+  font-size: 1rem;
+  grid-area: title;
+}
+
+:host span {
+  font-size: 0.9rem;
+  grid-area: subtitle;
+}
+
+:host sg-icon {
+  grid-area: icon;
+  justify-items: center;
+}
+
+:host sg-icon svg {
+  fill: var(--color-white);
+}
+
+:host ul {
+  display: none;
+  position: absolute;
+  background-color: var(--color-white);
+  width: calc(100% - 2rem);
+  top: 100%;
+  right: 0;
+  color: var(--color-main);
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.1),
+    -15px 15px 15px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 var(--radius) var(--radius);
+  border-top: 1px solid var(--color-main);
 }

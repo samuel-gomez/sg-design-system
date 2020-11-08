@@ -19,7 +19,7 @@
   color: var(--color-blue);
 }
 
-:host(.active) {
-  color: var(--color-blue);
+:host a.active {
+  color: var(--color-main);
   background-color: var(--color-blue-light);
 }

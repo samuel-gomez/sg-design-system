@@ -34,6 +34,7 @@ class SgHeader extends HTMLElement {
     this.shadowRoot.innerHTML = `<style>${style.toString()}</style>${replaceProps(
       {
         title: this.title,
+        subtitle: this.subtitle,
         activeItem: this.activeMenuItem,
         menuItems,
       },

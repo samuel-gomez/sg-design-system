@@ -2,18 +2,21 @@ import style from './style.css';
 import template from './template.html';
 import replaceProps from '../../../_helpers/replaceProps';
 
+const setActive = ({ href, pathname }) =>
+  `${pathname === '/' ? href : `${href}/`}` === pathname ? 'active' : '';
 class SgMenuItem extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
     this.label = this.getAttribute('label');
     this.href = this.getAttribute('href');
-    this.className =
-      `${this.href}/` === window.location.pathname ? 'active' : '';
+    this.className = setActive({
+      href: this.href,
+      pathname: window.location.pathname,
+    });
   }
 
   connectedCallback() {
-    console.log('location', window.location.pathname);
     this.shadowRoot.innerHTML = `<style>${style.toString()}</style>${replaceProps(
       {
         href: this.href,

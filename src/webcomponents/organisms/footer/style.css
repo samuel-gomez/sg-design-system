@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background-color: var(--color-main);
+  background: var(--color-white);
 }
 
 :host sg-container {
@@ -9,5 +9,6 @@
       100px,
       max-content
     );
+  grid-template-rows: minmax(50px, max-content);
   align-items: center;
 }

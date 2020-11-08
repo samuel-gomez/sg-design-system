@@ -10,14 +10,16 @@
     
     <sg-layout>
       <div slot="header">
-        <sg-header activeMenuItem="{{page.url}}"></sg-header>
+        <sg-header></sg-header>
       </div>
       <div slot="content">
         {% block content %}
             {{ content | safe }}
         {% endblock content %}        
       </div>
-      <div slot="footer">Copyright 2021</div>
+      <div slot="footer">
+        <sg-footer copy="&copy; Copyright 2021" ></sg-footer>
+      </div>
     </sg-layout>
     <script src="/assets/index.js" type="module"></script>
   </body>

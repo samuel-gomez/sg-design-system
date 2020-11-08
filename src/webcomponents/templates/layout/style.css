@@ -19,4 +19,5 @@ section {
 
 footer {
   grid-area: footer;
+  background: var(--color-grey-3);
 }

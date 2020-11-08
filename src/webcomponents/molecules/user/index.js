@@ -10,27 +10,21 @@ class SgUser extends HTMLElement {
     this.src = this.getAttribute('src');
     this.title = this.getAttribute('title');
     this.alt = this.getAttribute('alt');
+    this.subtitle = this.getAttribute('subtitle');
   }
 
   static get observedAttributes() {
-    return ['src', 'title', 'alt'];
+    return ['src', 'title', 'alt', 'subtitle'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'src' && oldValue !== newValue) {
-      this.updateSrc(newValue);
-    }
     if (name === 'title' && oldValue !== newValue) {
       this.updateTitle(newValue);
     }
-    if (name === 'alt' && oldValue !== newValue) {
-      this.updateAlt(newValue);
-    }
-  }
 
-  updateSrc(src) {
-    this.src = src;
-    this.render();
+    if (name === 'subtitle' && oldValue !== newValue) {
+      this.updateSubtitle(newValue);
+    }
   }
 
   updateTitle(title) {
@@ -38,8 +32,8 @@ class SgUser extends HTMLElement {
     this.render();
   }
 
-  updateAlt(alt) {
-    this.alt = alt;
+  updateSubtitle(subtitle) {
+    this.subtitle = subtitle;
     this.render();
   }
 
@@ -50,9 +44,8 @@ class SgUser extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `<style>${style.toString()}</style>${replaceProps(
       {
+        subtitle: this.subtitle,
         title: this.title,
-        alt: this.alt,
-        src: this.src,
       },
       `${template}`,
     )}`;

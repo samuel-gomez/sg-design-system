@@ -13,6 +13,7 @@ import './molecules/user';
 
 /* Organisms */
 import './organisms/header';
+import './organisms/footer';
 
 /* Templates */
 import './templates/container';
