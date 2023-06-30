@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "1.0.1",
-    "chalk": "5.0.1",
+    "chalk": "5.3.0",
     "find": "0.3.0",
     "fs-extra": "10.1.0",
     "onchange": "7.1.0",
